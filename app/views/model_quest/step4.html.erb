@@ -1,0 +1,32 @@
+<div class="container">
+ <p class="text-block">
+Нужно посчитать средний балл всех студентов.
+Если студент не получал оценок, то его средний балл равен 0.   
+</p>
+  <div class="two-lists"> 
+   <div class="expected">
+    <ul>
+      <li>Anthony имеет средний балл 4.75</li>
+      <li>Bob имеет средний балл 3.67</li>
+      <li>Cris имеет средний балл 0.0</li>
+      <li>Daria имеет средний балл 4.33</li>
+      <li>Eugene имеет средний балл 2.33</li>
+      <li>Frank имеет средний балл 0.0</li>
+      <li>Grisha имеет средний балл 3.33</li>
+    </ul>
+    </div>
+    <div class="actual">
+    <ul>
+      <%- @students.each do |s| %>
+      <li><%= "#{s.name} имеет средний балл #{s.average_grade}" %></li>
+      <%- end %>  
+    </ul>
+    </div>
+  </div>        
+<p class="text-block">
+Если списки выглядят одинаково, можно двигаться дальше.
+</p>
+<%= button_to 'К пройденным курсам', '/step5', method: :get %>  
+</div>        
+  
+</div>

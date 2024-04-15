@@ -1,0 +1,58 @@
+<div class="container">
+<h2>
+  Студенты
+</h2>
+  <div class="two-lists"> 
+    <div class="expected">
+      <p>Правильно:</p>
+        <ul>
+        <li>Anthony</li>
+        <li>Bob</li>
+        <li>Cris</li>
+        <li>Daria</li>
+        <li>Eugene</li>
+        <li>Frank</li>
+        <li>Grisha</li>
+      </ul>
+    </div>
+    <div class="actual">
+      <p>Ваш ответ:</p>
+      <ul>
+        <%- @students.each do |s| %>
+          <li><%= s.name%></li>
+        <%-end%>
+      </ul>
+  </div>
+  </div>
+
+<h2>
+  Курсы
+</h2>
+  <div class="two-lists"> 
+  <div class="expected">
+    <p>Правильно:</p>
+      <ul>
+        <li>Math 101</li>
+        <li>СS 101</li>
+        <li>PTP 212</li>
+        <li>RDB 251</li>
+        <li>Hidden Course 999</li>
+      </ul>
+  </div>
+      <div class="actual">
+        <p>Ваш ответ:</p>
+        <ul>
+        <%- @courses.each do |s| %>
+         <li><%= s.title%></li>
+         <%-end%>
+      </ul>
+    </div>
+</div>        
+<p class="text-block">
+Если списки выглядят одинаково, можно двигаться дальше.
+</p>
+<%= button_to 'К журналу записи на курсы', '/step3', method: :get %>  
+</div>
+           
+
+

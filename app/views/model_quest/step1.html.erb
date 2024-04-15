@@ -1,0 +1,38 @@
+<div class="container">
+<h1>Привет!</h1>
+<p class="text-block">
+Этот этап Rails Quest посвящен моделям.
+</p>
+<p class="text-block">
+Проект подключен к базе, в которой есть следующие таблицы:
+</p>
+<p class="text-block">
+students: id, name
+</p>
+<p class="text-block">
+courses: id, title
+</p>
+<p class="text-block">
+enrollments: id, course_id, student_id, status
+</p>
+<p class="text-block">
+grades: id, enrollment_id, score
+</p>
+ 
+<p class="text-block">
+На следующей странице должны быть списки студентов и курсов.
+</p>
+<p class="text-block">
+Страница будет падать, потому что нет нужных моделей.
+</p>
+<p class="text-block">
+На каждой странице будет два списка: правильный и текущий.
+Нужно, чтобы они совпали.
+</p>
+<p class="text-block">
+Представления и контроллеры для всех заданий, кроме пятого, уже готовы. 
+Вы можете посмотреть, какие методы моделей вызываются в контроллерах и во view, и что они ожидают. Основную работу нужно сделать в моделях.
+</p>
+<%= button_to 'К списку студентов', '/step2', method: :get %>
+</div>
+
